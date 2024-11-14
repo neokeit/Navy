@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Name="lbLog" TextWrapping="Wrap" />
+        <ListView Grid.Row="1" Name="lstSeries"></ListView>
+        <Grid Grid.Row="2" Margin="5" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label>Series</Label>
+            <TextBox Grid.Column="1"  Name="NuevaSerie" TextWrapping="Wrap" />
+            <Button Grid.Column="2" Click="Button_Click" Margin="5,0">Añadir</Button>
+        </Grid>
     </Grid>
 </Window>
